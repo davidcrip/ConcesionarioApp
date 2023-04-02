@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".VentaActivity"
+    android:background="@color/black"
+    >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Ventas"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        />
+
+    <EditText
+        android:id="@+id/etcodigo"
+        android:layout_width="360dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_marginTop="15dp"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:hint="Codigo"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+
+        >
+
+        <EditText
+            android:id="@+id/etfecha"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Fecha"
+            android:inputType="date"
+            android:textColorHint="@color/white"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            />
+
+        <CheckBox
+            android:id="@+id/cbactivoventa"
+            android:layout_width="160dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=" Activo"
+            android:enabled="false"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:drawableStart="@drawable/ic_baseline_perm_identity_24"
+            android:textColor="@color/white"
+
+            />
+
+
+
+        <EditText
+            android:id="@+id/etidentificacion"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Identificacion"
+            android:inputType="number"
+            android:textSize="25dp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+
+            />
+
+        <ImageView
+            android:id="@+id/imageView30"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:onClick="ConsultarCliente"
+            app:srcCompat="@drawable/baseline_search_24" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvnombre"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="Nombre"
+            android:textSize="25dp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/tvcorreo"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="Correo"
+            android:textSize="25dp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textColor="#051F72"
+            android:textSize="25dp"
+            android:drawableStart="@drawable/ic_baseline_directions_car_24"
+            />
+
+        <EditText
+            android:id="@+id/etplaca"
+            android:layout_width="230dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Placa"
+            android:inputType="textPersonName"
+            android:textSize="25dp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+
+            />
+
+        <ImageView
+            android:id="@+id/imageView40"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:onClick="ConsultarVehiculo"
+            app:srcCompat="@drawable/baseline_search_24" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvmodelo"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="Modelo"
+            android:textSize="25dp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+
+            />
+
+        <TextView
+            android:id="@+id/tvmarca"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="Marca"
+            android:textSize="25dp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btanular"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:onClick="Anular"
+            android:text="Anular"
+            android:backgroundTint="#151515"
+            android:enabled="false"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="92dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:onClick="Regresar"
+            app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="92dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:onClick="Guardar"
+            app:srcCompat="@drawable/baseline_save_24" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="92dp"
+            android:layout_height="37dp"
+            android:layout_weight="1"
+            android:onClick="ConsultarVenta"
+            app:srcCompat="@drawable/baseline_search_24" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="92dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:onClick="Cancelar"
+            app:srcCompat="@drawable/baseline_delete_24" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="92dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Regresar"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/textView50"
+            android:layout_width="92dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Guardar"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/textView60"
+            android:layout_width="92dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Buscar   Venta"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/textView70"
+            android:layout_width="92dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Borrar"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
